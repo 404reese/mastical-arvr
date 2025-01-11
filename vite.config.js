@@ -1,23 +1,10 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  server: {
-    port: 3001,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-        secure: false,
-      },
+export default {
+    root: './src',
+    server: {
+        open: true,
     },
-  },
-  build: {
-    target: 'esnext',
-  },
-  resolve: {
-    alias: {
-      '@': '/src',
+    build: {
+        outDir: '../dist',
     },
-  },
-  publicDir: 'src/assets', // Ensure this is set correctly
-});
+    publicDir: '../src/assets', // Point to the directory containing static files
+};
