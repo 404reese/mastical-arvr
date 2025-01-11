@@ -2,5 +2,12 @@
   "dependencies": {
     "gsap": "^3.12.5",
     "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
   }
 }
