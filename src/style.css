@@ -1,0 +1,97 @@
+/* General Reset */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Fullscreen container for the Three.js canvas */
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Background layer */
+}
+
+/* Ensure canvas does not disrupt layout */
+canvas {
+    display: block;
+}
+
+/* Style for the info container */
+.info-container {
+    position: absolute;
+    top: 25%;
+    transform: translate(0, -25%);
+    left: 20px;
+    background: rgba(0, 0, 0, 0.144); /* Slightly transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 10; /* Layer above the canvas */
+    max-width: 400px;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* Allow pointer events to pass through */
+}
+
+/* Style for the name/title in the info container */
+.info-name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/* Style for the description text */
+.info-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.move-options{
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+.change_texture_options{
+    display: flex;
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+}
+
+/* Style for the button */
+#choose {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 15; /* Layer above both canvas and info-container */
+}
+
+#choose:hover {
+    background: rgb(97, 95, 95);
+}
+
+#minimap-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid black;
+    z-index: 20;
+    overflow: hidden;
+    border-radius: 10px;
+}
